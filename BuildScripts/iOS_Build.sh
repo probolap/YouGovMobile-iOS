@@ -1,13 +1,21 @@
+
+
+PROVISIONING_PROFILE_UUID="da99eb54-ba0b-4f1d-9a69-40e749f7a29c"
+PROVISIONING_PROFILE_NAME="Kinvey PoC Distribution"
+CODE_SIGN_IDENTITY_NAME="iPhone Distribution: Genentech Inc"
+ARCHIVE_PATH="./JenkinsArchive/YouGov.xcarchive"
+EXPORT_PATH="./JenkinsIPAExport/YouGov.ipa"
+
 xcodebuild -alltargets clean
 
 rm -rf ./JenkinsBuild/*
 
-xcodebuild -target YouGov PROVISIONING_PROFILE="da99eb54-ba0b-4f1d-9a69-40e749f7a29c" CONFIGURATION_BUILD_DIR=JenkinsBuild
+xcodebuild -target YouGov PROVISIONING_PROFILE=$PROVISIONING_PROFILE_UUID CONFIGURATION_BUILD_DIR=JenkinsBuild
 
 rm -rf ./JenkinsArchive/*
 
-xcodebuild -scheme YouGov archive PROVISIONING_PROFILE="da99eb54-ba0b-4f1d-9a69-40e749f7a29c" CODE_SIGN_IDENTITY="iPhone Distribution: Genentech Inc" -archivePath ./JenkinsArchive/YouGov.xcarchive
+xcodebuild -scheme YouGov archive PROVISIONING_PROFILE="$PROVISIONING_PROFILE_UUID" CODE_SIGN_IDENTITY="$CODE_SIGN_IDENTITY_NAME" -archivePath "$ARCHIVE_PATH"
 
 rm -rf ./JenkinsIPAExport/*
 
-xcodebuild -exportArchive -exportFormat IPA -exportProvisioningProfile Kinvey\ PoC\ Distribution -archivePath ./JenkinsArchive/YouGov.xcarchive -exportPath ./JenkinsIPAExport/YouGov.ipa
+xcodebuild -exportArchive -exportFormat IPA -exportProvisioningProfile "$PROVISIONING_PROFILE_NAME" -archivePath "$ARCHIVE_PATH" -exportPath "$EXPORT_PATH"
