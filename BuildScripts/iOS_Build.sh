@@ -12,12 +12,6 @@ rm -rf ./JenkinsBuild/*
 
 xcodebuild -target YouGov PROVISIONING_PROFILE=$PROVISIONING_PROFILE_UUID CONFIGURATION_BUILD_DIR=JenkinsBuild
 
-
-xcodebuild clean
-
-xcodebuild test -scheme 'YouGov' -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2'
-
-
 #rm -rf ./JenkinsArchive/*
 
 #xcodebuild -scheme YouGov archive PROVISIONING_PROFILE="$PROVISIONING_PROFILE_UUID" CODE_SIGN_IDENTITY="$CODE_SIGN_IDENTITY_NAME" -archivePath "$ARCHIVE_PATH"
