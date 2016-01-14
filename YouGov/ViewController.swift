@@ -11,6 +11,8 @@ import Crashlytics
 
 class ViewController: UIViewController {
 
+    let dataSource = FeedDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +23,10 @@ class ViewController: UIViewController {
         button.addTarget(self, action: "crashButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
 
+    }
+    
+    func fetchData() {
+        dataSource.dataModels.appendContentsOf(["a", "b", "c"])
     }
     
     @IBAction func crashButtonTapped(sender: AnyObject) {

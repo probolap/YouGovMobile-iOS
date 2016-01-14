@@ -9,11 +9,20 @@
 import XCTest
 @testable import YouGov
 
+class FeedDataSourceMock: FeedDataSourceProtocol {
+    
+    var dataModels = [String]()
+}
+
 class YouGovTests: XCTestCase {
+    
+    var viewController: ViewController!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewController = ViewController()
+        
     }
     
     override func tearDown() {
@@ -24,6 +33,17 @@ class YouGovTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        // given
+        
+        // when
+        XCTAssertNotNil(viewController.dataSource, "Datasource is set")
+        
+        // then
+        
+        
+        
+        
     }
     
     func testPerformanceExample() {
