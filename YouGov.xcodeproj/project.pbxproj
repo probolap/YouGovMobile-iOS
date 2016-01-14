@@ -18,6 +18,7 @@
 		63E45D801C4517BA00C5EDC3 /* YouGovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E45D7F1C4517BA00C5EDC3 /* YouGovTests.swift */; };
 		63E45D8B1C4517BA00C5EDC3 /* YouGovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E45D8A1C4517BA00C5EDC3 /* YouGovUITests.swift */; };
 		63FCF52C1C479483004A7DAA /* FeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCF52B1C479483004A7DAA /* FeedDataSource.swift */; };
+		63FCF52E1C47A5A7004A7DAA /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FCF52D1C47A5A7004A7DAA /* NextViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		63E45D8A1C4517BA00C5EDC3 /* YouGovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGovUITests.swift; sourceTree = "<group>"; };
 		63E45D8C1C4517BA00C5EDC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63FCF52B1C479483004A7DAA /* FeedDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDataSource.swift; sourceTree = "<group>"; };
+		63FCF52D1C47A5A7004A7DAA /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				63FCF52B1C479483004A7DAA /* FeedDataSource.swift */,
 				63E45D671C4517BA00C5EDC3 /* AppDelegate.swift */,
 				63E45D691C4517BA00C5EDC3 /* ViewController.swift */,
+				63FCF52D1C47A5A7004A7DAA /* NextViewController.swift */,
 				63E45D6B1C4517BA00C5EDC3 /* Main.storyboard */,
 				63E45D711C4517BA00C5EDC3 /* Assets.xcassets */,
 				63E45D731C4517BA00C5EDC3 /* LaunchScreen.storyboard */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FCF52E1C47A5A7004A7DAA /* NextViewController.swift in Sources */,
 				63E45D701C4517BA00C5EDC3 /* YouGov.xcdatamodeld in Sources */,
 				63E45D6A1C4517BA00C5EDC3 /* ViewController.swift in Sources */,
 				63FCF52C1C479483004A7DAA /* FeedDataSource.swift in Sources */,

@@ -1,3 +1,5 @@
+
+
 //
 //  YouGovUITests.swift
 //  YouGovUITests
@@ -31,6 +33,15 @@ class YouGovUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        let pushButton = app.buttons["Push"]
+        pushButton.tap()
+        
+        let backButton = app.navigationBars["YouGov.NextView"].childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0)
+        backButton.tap()
+        pushButton.tap()
+        backButton.tap()
     }
     
 }
